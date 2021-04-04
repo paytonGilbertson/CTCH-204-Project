@@ -1,7 +1,5 @@
 # CTCH-204-Project - Dr. T-Rizzle Music Video
 
-**Dr. T-Rizzle Music Video with Processing**
-
 # Rules
 Summary:
 As outlined in the syllabus, a significant portion of your grade (40%) is based on a creative programming project. Ultimately what sort of piece you create is up to 

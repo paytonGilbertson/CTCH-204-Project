@@ -6,6 +6,9 @@ TRizzleHead fedoraHead;
 TRizzleHead techHead;
 TRizzleHead mercaHead;
 
+int bpm = 96;
+// if framerate is 30fps, every 48 frames is 1 beat
+
 void setup() {
   size(500, 500);
   background(255);

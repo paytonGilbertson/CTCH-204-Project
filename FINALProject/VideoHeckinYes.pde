@@ -1,8 +1,9 @@
 void videoHeckYa() {
   background(255);
-  song.play();
-  song.amp(1);
-  preWords();
+  //song.play();
+  //song.amp(1);
+  staticScreen();
+  delay(1000);
 }
 
 void staticScreen() {
@@ -22,11 +23,4 @@ void staticScreen() {
       rect(x, y, rectWidth, rectHeight);
     }
   }
-  delay(5000);
-  staticSound.stop();
-  //currentState = ProjectState.PLAYING;
-}
-
-void preWords(){
-  
 }

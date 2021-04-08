@@ -1,7 +1,7 @@
 import processing.sound.*;
 
-//SoundFile song;
-SoundFile staticSound;
+SoundFile song;
+SoundFile staticSound; // from zapsplat.com
 
 TRizzleHead fedoraHead;
 TRizzleHead techHead;
@@ -9,8 +9,9 @@ TRizzleHead mercaHead;
 
 enum ProjectState {
   BEGIN, 
-    PLAYING, 
-    END
+  STATIC,
+  PLAYING, 
+  END
 }
 
 ProjectState currentState = ProjectState.BEGIN;
@@ -24,7 +25,7 @@ void setup() {
   frameRate(60);
   colorMode(RGB);
 
-  //song = new SoundFile(this, "song.mp3");
+  song = new SoundFile(this, "song.mp3");
   staticSound = new SoundFile(this, "static.mp3");
 
   fedoraHead = new TRizzleHead();
@@ -44,6 +45,10 @@ void draw() {
   case BEGIN:
     playButton();
     print("BEGIN");
+    break;
+  case STATIC:
+    staticScreen();
+    print("STATIC");
     break;
   case PLAYING:
     print("PLAYING");

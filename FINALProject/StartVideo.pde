@@ -28,7 +28,7 @@ void playButton() {
 
 void mouseClicked() {
   if (overPlay(175, 175, 150, 150)) {
-    currentState = ProjectState.PLAYING;
+    currentState = ProjectState.STATIC;
   }
 }
 

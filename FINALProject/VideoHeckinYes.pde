@@ -1,7 +1,26 @@
-void videoHeckYa(){
+void videoHeckYa() {
   background(255);
-  fill(255);
-  rect(0, 0, 500, 500);
-  fill(123, 45, 90);
-  rect(100, 100, 100, 100);
+  //song.play();
+  //song.amp(1);
+  staticScreen();
+  delay(1000);
+}
+
+void staticScreen() {
+  staticSound.play();
+  staticSound.amp(0.5);
+  color[] colours = {color(0), color(100), color(200)};
+
+  int x = 0;
+  int y = 0;
+  int rectWidth = 20;
+  int rectHeight = 20;
+  noStroke();
+
+  for (x = 0; x < width; x += rectWidth) {
+    for (y = 0; y < height; y += rectHeight) {
+      fill(colours[int(random(colours.length))]);
+      rect(x, y, rectWidth, rectHeight);
+    }
+  }
 }

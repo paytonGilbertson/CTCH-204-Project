@@ -1,15 +1,16 @@
 import processing.sound.*;
 
-SoundFile file;
+//SoundFile song;
+SoundFile staticSound;
 
 TRizzleHead fedoraHead;
 TRizzleHead techHead;
 TRizzleHead mercaHead;
 
 enum ProjectState {
-  BEGIN,
-  PLAYING,
-  END
+  BEGIN, 
+    PLAYING, 
+    END
 }
 
 ProjectState currentState = ProjectState.BEGIN;
@@ -22,33 +23,34 @@ void setup() {
   background(255);
   frameRate(60);
   colorMode(RGB);
-  
-  file = new SoundFile(this, "song.mp3");
-  file.play();
-  file.amp(1);
-  
+
+  //song = new SoundFile(this, "song.mp3");
+  staticSound = new SoundFile(this, "static.mp3");
+
   fedoraHead = new TRizzleHead();
   techHead = new TRizzleHead();
   mercaHead = new TRizzleHead();
-  
+
   fedoraHead.image = loadImage("t-rizzleFedora.png");
   techHead.image = loadImage("techHead.png");
   mercaHead.image = loadImage("merca.png");
 }
 
 
-void draw(){
+void draw() {
   background(255);
-  
-  switch(currentState){
-    case BEGIN:
-      playButton();
-      break;
-    case PLAYING:
-      videoHeckYa();
-      break;
-    case END:
-      endSlate();
-      break;
+
+  switch(currentState) {
+  case BEGIN:
+    playButton();
+    print("BEGIN");
+    break;
+  case PLAYING:
+    print("PLAYING");
+    videoHeckYa();
+    break;
+  case END:
+    endSlate();
+    break;
   }
 }

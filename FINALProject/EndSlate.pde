@@ -1,3 +1,2 @@
-void endSlate(){
-  
+void endSlate() {
 }

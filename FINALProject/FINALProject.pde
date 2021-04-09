@@ -1,11 +1,13 @@
-import processing.sound.*;
+import ddf.minim.*;
 
-SoundFile song;
-SoundFile staticSound; // from zapsplat.com
+Minim mSong;
+AudioPlayer song;
 
 TRizzleHead fedoraHead;
 TRizzleHead techHead;
 TRizzleHead mercaHead;
+
+int count = 0;
 
 enum ProjectState {
   BEGIN, 
@@ -17,16 +19,16 @@ enum ProjectState {
 ProjectState currentState = ProjectState.BEGIN;
 
 int bpm = 96;
-// if framerate is 60fps, every 96 frames is 1 beat
+// if framerate is 30fps, every 48 frames is 1 beat
 
 void setup() {
   size(500, 500);
   background(255);
-  frameRate(60);
+  frameRate(30);
   colorMode(RGB);
 
-  song = new SoundFile(this, "song.mp3");
-  staticSound = new SoundFile(this, "static.mp3");
+  mSong = new Minim(this);
+  song = mSong.loadFile("song.mp3");
 
   fedoraHead = new TRizzleHead();
   techHead = new TRizzleHead();
@@ -44,18 +46,23 @@ void draw() {
   switch(currentState) {
   case BEGIN:
     playButton();
-    print("BEGIN");
+    //print("BEGIN");
     break;
   case STATIC:
     staticScreen();
-    print("STATIC");
+    //print("STATIC");
+    count++;
     break;
   case PLAYING:
-    print("PLAYING");
+    //print("PLAYING");
     videoHeckYa();
     break;
   case END:
     endSlate();
     break;
+  }
+  println(count);
+  if(count >= 250) {
+    currentState = ProjectState.PLAYING;
   }
 }

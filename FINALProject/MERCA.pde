@@ -11,6 +11,9 @@ void mercaBG (){
   }
   fill(60, 59, 110);
   star(100, 100, 9, 21, 5);
+  
+  imageMode(CENTER);
+  image(mercaHead.image, width/2, height/2);
 }
 
 /////////////// FROM PROCESSING.ORG EXAMPLE ///////////////

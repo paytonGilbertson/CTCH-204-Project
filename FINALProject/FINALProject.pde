@@ -49,34 +49,34 @@ void setup() {
 void draw() {
   background(255);
 
-  mercaBG();
+  //mercaBG();
 
-  //switch(currentState) {
-  //case BEGIN:
-  //  playButton();
-  //  //print("BEGIN");
-  //  break;
-  //case STATIC:
-  //staticSound.play();
-  //  staticScreen();
-  //  //print("STATIC");
-  //  count++;
-  //  if(count >= 60){
-  //    staticSound.close();
-  //   currentState = ProjectState.PLAYING; 
-  //  }
-  //  break;
-  //case PLAYING:
-  //  //print("PLAYING");
-  //  song.play();
-  //  videoHeckYa();
-  //  break;
-  //case END:
-  //  endSlate();
-  //  break;
-  //}
-  //println(count);
-  //if(count >= 250) {
-  //  currentState = ProjectState.PLAYING;
-  //}
+  switch(currentState) {
+  case BEGIN:
+    playButton();
+    //print("BEGIN");
+    break;
+  case STATIC:
+  staticSound.play();
+    staticScreen();
+    //print("STATIC");
+    count++;
+    if(count >= 75){
+      staticSound.close();
+     currentState = ProjectState.PLAYING; 
+    }
+    break;
+  case PLAYING:
+    //print("PLAYING");
+    song.play();
+    videoHeckYa();
+    break;
+  case END:
+    endSlate();
+    break;
+  }
+  println(count);
+  if(count >= 250) {
+    currentState = ProjectState.PLAYING;
+  }
 }

@@ -1,6 +1,6 @@
 void videoHeckYa() {
   background(255);
-  preWords();
+  mercaBG();
 }
 
 void staticScreen() {

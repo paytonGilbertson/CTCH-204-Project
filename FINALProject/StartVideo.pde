@@ -26,16 +26,17 @@ void playButton() {
   triangle(topX, topY, rightX, rightY, bottomX, bottomY);
 }
 
-void mouseClicked() {
+void mousePressed() {
   if (overPlay(175, 175, 150, 150)) {
     currentState = ProjectState.STATIC;
   }
 }
 
 boolean overPlay(int x, int y, int w, int h) {
-  if (mouseX >= x && mouseX <= x+w &&
-    mouseY >= y && mouseY <= y+h) {
-    println("MOUSE OVER");
+  if (mouseX >= 0 && mouseX <= width &&
+    mouseY >= 0 && mouseY <= height) {
+    //println("MOUSE OVER");
+    //cursor(HAND);
     return true;
   } else {
     return false;

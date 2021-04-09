@@ -3,6 +3,9 @@ import ddf.minim.*;
 Minim mSong;
 AudioPlayer song;
 
+Minim mStatic;
+AudioPlayer staticSound;
+
 TRizzleHead fedoraHead;
 TRizzleHead techHead;
 TRizzleHead mercaHead;
@@ -29,6 +32,9 @@ void setup() {
 
   mSong = new Minim(this);
   song = mSong.loadFile("song.mp3");
+  
+  mStatic = new Minim(this);
+  staticSound = mStatic.loadFile("static.mp3");
 
   fedoraHead = new TRizzleHead();
   techHead = new TRizzleHead();
@@ -49,12 +55,18 @@ void draw() {
     //print("BEGIN");
     break;
   case STATIC:
+  staticSound.play();
     staticScreen();
     //print("STATIC");
     count++;
+    if(count >= 60){
+      staticSound.close();
+     currentState = ProjectState.PLAYING; 
+    }
     break;
   case PLAYING:
     //print("PLAYING");
+    song.play();
     videoHeckYa();
     break;
   case END:

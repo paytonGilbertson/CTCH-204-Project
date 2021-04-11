@@ -1,5 +1,5 @@
 ///////////////// Exact MERCA colours from https://www.schemecolor.com/united-states-of-america-flag-colors.php ////////////
-
+PGraphics pg;
 void mercaBG (){
   background(255);
   int stripeY = 0; 
@@ -9,25 +9,27 @@ void mercaBG (){
     fill(178, 34, 52);
      rect(0, stripeY, width, stripeHeight); 
   }
-  fill(60, 59, 110);
-  star(100, 100, 9, 21, 5);
   
+  image(star(),50,50);  
   imageMode(CENTER);
   image(mercaHead.image, width/2, height/2);
+  
 }
 
 /////////////// FROM PROCESSING.ORG EXAMPLE ///////////////
-void star(float x, float y, float radius1, float radius2, int npoints) {
-  float angle = TWO_PI / npoints;
+PImage star() {
+  pg = createGraphics(50, 50);
+  pg.beginDraw();
+  float angle = TWO_PI / 5;
   float halfAngle = angle/2.0;
-  beginShape();
   for (float a = 0; a < TWO_PI; a += angle) {
-    float sx = x + cos(a) * radius2;
-    float sy = y + sin(a) * radius2;
-    vertex(sx, sy);
-    sx = x + cos(a+halfAngle) * radius1;
-    sy = y + sin(a+halfAngle) * radius1;
-    vertex(sx, sy);
+    float sx = 100 + cos(a) * 21;
+    float sy = 100 + sin(a) * 21;
+    pg.vertex(sx, sy);
+    sx = 100 + cos(a+halfAngle) * 9;
+    sy = 100 + sin(a+halfAngle) * 9;
+    pg.vertex(sx, sy);
   }
-  endShape(CLOSE);
+  pg.endDraw();
+  return pg;
 }

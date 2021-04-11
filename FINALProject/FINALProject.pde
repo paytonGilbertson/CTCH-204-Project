@@ -57,7 +57,7 @@ void draw() {
     //print("BEGIN");
     break;
   case STATIC:
-  staticSound.play();
+  //staticSound.play();
     staticScreen();
     //print("STATIC");
     count++;
@@ -68,7 +68,7 @@ void draw() {
     break;
   case PLAYING:
     //print("PLAYING");
-    song.play();
+    //song.play();
     videoHeckYa();
     break;
   case END:

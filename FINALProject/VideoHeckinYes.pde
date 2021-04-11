@@ -21,6 +21,5 @@ void staticScreen() {
   //currentState = ProjectState.PLAYING;
 }
 
-void preWords(){
-  
+void preWords() {
 }

@@ -14,9 +14,9 @@ int count = 0;
 
 enum ProjectState {
   BEGIN, 
-  STATIC,
-  PLAYING, 
-  END
+    STATIC, 
+    PLAYING, 
+    END
 }
 
 ProjectState currentState = ProjectState.BEGIN;
@@ -32,7 +32,7 @@ void setup() {
 
   mSong = new Minim(this);
   song = mSong.loadFile("song.mp3");
-  
+
   mStatic = new Minim(this);
   staticSound = mStatic.loadFile("static.mp3");
 
@@ -57,18 +57,20 @@ void draw() {
     //print("BEGIN");
     break;
   case STATIC:
-  //staticSound.play();
+    staticSound.play();
     staticScreen();
     //print("STATIC");
     count++;
-    if(count >= 75){
+    if (count >= 75) {
       staticSound.close();
-     currentState = ProjectState.PLAYING; 
+      count = 0;
+      currentState = ProjectState.PLAYING;
     }
     break;
   case PLAYING:
+    count++;
     //print("PLAYING");
-    //song.play();
+    song.play();
     videoHeckYa();
     break;
   case END:
@@ -76,7 +78,7 @@ void draw() {
     break;
   }
   println(count);
-  if(count >= 250) {
+  if (count >= 250) {
     currentState = ProjectState.PLAYING;
   }
 }

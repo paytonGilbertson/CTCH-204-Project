@@ -1,6 +1,11 @@
 void videoHeckYa() {
   background(255);
-  mercaBG();
+  if(count < 1504){
+    mercaBG();
+  }
+  if(count >= 1504 && count < 3008){
+   techTime(); 
+  }
 }
 
 void staticScreen() {

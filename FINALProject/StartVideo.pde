@@ -27,7 +27,7 @@ void playButton() {
 }
 
 void mousePressed() {
-  if (overPlay(175, 175, 150, 150)) {
+  if (overPlay(175, 175, 150, 150) && currentState == ProjectState.BEGIN) {
     currentState = ProjectState.STATIC;
   }
 }

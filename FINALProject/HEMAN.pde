@@ -274,21 +274,34 @@ float x69 = random(0, 500);
 float y69 = random(0, 500);
 float size69 = random(1, 5);
 
-
+PImage[] fedora = new PImage[9];
+float fedoraY = 0;
+int fedoraCount = 0;
 
 void hemanTime() {
+  fedora[0] = loadImage("fedora1.png");
+  fedora[1] = loadImage("fedora1.png");
+  fedora[2] = loadImage("fedora2.png");
+  fedora[3] = loadImage("fedora3.png");
+  fedora[4] = loadImage("fedora4.png");
+  fedora[5] = loadImage("fedora5.png");
+  fedora[6] = loadImage("fedora6.png");
+  fedora[7] = loadImage("fedora7.png");
+  fedora[8] = loadImage("fedora8.png");
+
+
   background(123, 22, 53);
-  for(int i = 0; i < 167; i++) {
-    stroke(lerpColor(color(255,0,0),color(0,255,0), i/167.0));
-    line(0,i,500,i);
+  for (int i = 0; i < 167; i++) {
+    stroke(lerpColor(color(255, 0, 0), color(0, 255, 0), i/167.0));
+    line(0, i, 500, i);
   }
-    for(int i = 0; i < 167; i++) {
-    stroke(lerpColor(color(0,255,0),color(0,0,255), i/167.0));
-    line(0,i+167,500,i+167);
+  for (int i = 0; i < 167; i++) {
+    stroke(lerpColor(color(0, 255, 0), color(0, 0, 255), i/167.0));
+    line(0, i+167, 500, i+167);
   }
-    for(int i = 0; i < 167; i++) {
-    stroke(lerpColor(color(0,0,255),color(255,0,0), i/167.0));
-    line(0,i+334,500,i+334);
+  for (int i = 0; i < 167; i++) {
+    stroke(lerpColor(color(0, 0, 255), color(255, 0, 0), i/167.0));
+    line(0, i+334, 500, i+334);
   }
   imageMode(CENTER);
   fourStar(x1, y1, size1);
@@ -360,6 +373,160 @@ void hemanTime() {
   fourStar(x67, y67, size67);
   fourStar(x68, y68, size68);
   fourStar(x69, y69, size69);
+  
+  if(count % 10 == 0){
+    x1 = random(0, 500);
+    y1 = random(0, 500);
+    x2 = random(0, 500);
+    y2 = random(0, 500);
+    x3 = random(0, 500);
+    y3 = random(0, 500);
+    x4 = random(0, 500);
+    y4 = random(0, 500);
+    x5 = random(0, 500);
+    y5 = random(0, 500);
+    x6 = random(0, 500);
+    y6 = random(0, 500);
+    x7 = random(0, 500);
+    y7 = random(0, 500);
+    x8 = random(0, 500);
+    y8 = random(0, 500);
+    x9 = random(0, 500);
+    y9 = random(0, 500);
+    x10 = random(0, 500);
+    y10 = random(0, 500);
+    x11 = random(0, 500);
+    y11 = random(0, 500);
+    x12 = random(0, 500);
+    y12 = random(0, 500);
+    x13 = random(0, 500);
+    y13 = random(0, 500);
+    x14 = random(0, 500);
+    y14 = random(0, 500);
+    x15 = random(0, 500);
+    y15 = random(0, 500);
+    x16 = random(0, 500);
+    y16 = random(0, 500);
+    x17 = random(0, 500);
+    y17 = random(0, 500);
+    x18 = random(0, 500);
+    y18 = random(0, 500);
+    x19 = random(0, 500);
+    y19 = random(0, 500);
+    x20 = random(0, 500);
+    y20 = random(0, 500);
+    x21 = random(0, 500);
+    y21 = random(0, 500);
+    x22 = random(0, 500);
+    y22 = random(0, 500);
+    x23 = random(0, 500);
+    y23 = random(0, 500);
+    x24 = random(0, 500);
+    y24 = random(0, 500);
+    x25 = random(0, 500);
+    y25 = random(0, 500);
+    x26 = random(0, 500);
+    y26 = random(0, 500);
+    x27 = random(0, 500);
+    y27 = random(0, 500);
+    x28 = random(0, 500);
+    y28 = random(0, 500);
+    x29 = random(0, 500);
+    y29 = random(0, 500);
+    x30 = random(0, 500);
+    y30 = random(0, 500);
+    x31 = random(0, 500);
+    y31 = random(0, 500);
+    x32 = random(0, 500);
+    y32 = random(0, 500);
+    x33 = random(0, 500);
+    y33 = random(0, 500);
+    x34 = random(0, 500);
+    y34 = random(0, 500);
+    x35 = random(0, 500);
+    y35 = random(0, 500);
+    x36 = random(0, 500);
+    y36 = random(0, 500);
+    x37 = random(0, 500);
+    y37 = random(0, 500);
+    x38 = random(0, 500);
+    y38 = random(0, 500);
+    x39 = random(0, 500);
+    y39 = random(0, 500);
+    x40 = random(0, 500);
+    y40 = random(0, 500);
+    x41 = random(0, 500);
+    y41 = random(0, 500);
+    x42 = random(0, 500);
+    y42 = random(0, 500);
+    x43 = random(0, 500);
+    y43 = random(0, 500);
+    x44 = random(0, 500);
+    y44 = random(0, 500);
+    x45 = random(0, 500);
+    y45 = random(0, 500);
+    x46 = random(0, 500);
+    y46 = random(0, 500);
+    x47 = random(0, 500);
+    y47 = random(0, 500);
+    x48 = random(0, 500);
+    y48 = random(0, 500);
+    x49 = random(0, 500);
+    y49 = random(0, 500);
+    x50 = random(0, 500);
+    y50 = random(0, 500);
+    x51 = random(0, 500);
+    y51 = random(0, 500);
+    x52 = random(0, 500);
+    y52 = random(0, 500);
+    x53 = random(0, 500);
+    y53 = random(0, 500);
+    x54 = random(0, 500);
+    y54 = random(0, 500);
+    x55 = random(0, 500);
+    y55 = random(0, 500);
+    x56 = random(0, 500);
+    y56 = random(0, 500);
+    x57 = random(0, 500);
+    y57 = random(0, 500);
+    x58 = random(0, 500);
+    y58 = random(0, 500);
+    x59 = random(0, 500);
+    y59 = random(0, 500);
+    x60 = random(0, 500);
+    y60 = random(0, 500);
+    x61 = random(0, 500);
+    y61 = random(0, 500);
+    x62 = random(0, 500);
+    y62 = random(0, 500);
+    x63 = random(0, 500);
+    y63 = random(0, 500);
+    x64 = random(0, 500);
+    y64 = random(0, 500);
+    x65 = random(0, 500);
+    y65 = random(0, 500);
+    x66 = random(0, 500);
+    y66 = random(0, 500);
+    x67 = random(0, 500);
+    y67 = random(0, 500);
+    x68 = random(0, 500);
+    y68 = random(0, 500);
+    x69 = random(0, 500);
+    y69 = random(0, 500);
+    
+  }
+
+  if (fedoraY <= height/2) {
+    image(fedora[fedoraCount], width/2, fedoraY, fedora[fedoraCount].width*2, fedora[fedoraCount].height*2);
+    fedoraCount++;
+    println(fedoraY);
+    fedoraY++;
+    if (fedoraCount == 7) {
+      fedoraCount = 0;
+    }
+  } else {
+    image(fedoraHead.image, width/2, height/2, fedoraHead.image.width*2, fedoraHead.image.height*2);
+  };
 };
 
 void fourStar(float centerX, float centerY, float size) {

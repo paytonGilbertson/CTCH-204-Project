@@ -37,7 +37,8 @@ void mercaBG () {
   star(161.5, 69.5);
   star(64, 174);
   
-  image(mercaBook, bookX, bookY, mercaBook.width/9, mercaBook.height/9 );
+  float num = random(5, 10);
+  image(mercaBook, bookX, bookY, mercaBook.width/num, mercaBook.height/num);
   if (count % 48 == 0) {
     bookX = random(0, 500);
     bookY = random(0, 500);

@@ -1,9 +1,9 @@
 void videoHeckYa() {
   background(255);
-  if(count < 1504){
+  if(count < 650){
     mercaBG();
   }
-  if(count >= 1504 && count < 3008){
+  if(count >= 650 && count < 3008){
    techTime(); 
   }
 }

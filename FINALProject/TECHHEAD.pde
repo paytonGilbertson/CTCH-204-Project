@@ -3,29 +3,64 @@ float letterX = 10;
 float letterY = 15;
 int i = 0;
 void techTime() {
+  imageMode(CORNER);
   font = createFont("Courier", 15);
   textFont(font);
   background(106, 55, 27);
+  drawPoly(deskTop);
+  drawPoly(booksWhite);
+  drawPoly(bookFront);
+  drawPoly(whiteboard);
+  drawPoly(pileOjunk);
   drawPoly(computer);
+  drawPoly(screen);
+  drawPoly(deskFront);
+
   fill(32, 194, 14);
   for (letterX = 0; letterX < width; letterX += 10) {
     for (letterY = 13; letterY < height; letterY += 15) {
-        if(i >= code.length){
-         i = 0; 
-         text(code[i], letterX, letterY);
-        }
-        else{
-          text(code[i], letterX, letterY);
-         i++; 
-        }
+      if (i >= code.length) {
+        i = 0; 
+        text(code[i], letterX, letterY);
+      } else {
+        text(code[i], letterX, letterY);
+        i++;
+      }
     }
   }
-   image(techHead.image, techHead.image.width/3.5-50, height - techHead.image.height*3.5, techHead.image.width*3.5, techHead.image.height*3.5);
-
+  image(techHead.image, techHead.image.width/3.5-50, height - techHead.image.height*3.5, techHead.image.width*3.5, techHead.image.height*3.5);
 }
 
 int[] computer = {#d8dacc, 
   363, 143, 489, 154, 500, 162, 489, 248, 500, 252, 500, 331, 493, 342, 322, 298, 322, 281, 351, 246, 343, 238
+};
+
+int[] screen = {#616d66, 
+  373, 160, 471, 170, 454, 245, 360, 226
+};
+
+int[] deskFront = {#6a563d, 
+  500, 485, 0, 271, 0, 253, 500, 453 
+};
+
+int[] deskTop = {#828381, 
+  500, 459, 0, 253, 0, 147, 500, 265
+};
+
+int[] booksWhite = {#a5a3ae, 
+  374, 13, 377, 11, 382, 14, 380, 23, 384, 28, 383, 43, 391, 42, 392, 57, 384, 62, 379, 69, 380, 91, 367, 96, 366, 134, 369, 240, 325, 305, 291, 319, 326, 151, 332, 144, 331, 125, 327, 120, 329, 109, 337, 101, 337, 78, 347, 71, 346, 52, 336, 50, 336, 30, 348, 26, 347, 15, 374, 13
+};
+
+int[] bookFront = {#20295c, 
+  263, 13, 346, 10, 346, 24, 336, 28, 334, 47, 344, 50, 343, 71, 336, 76, 336, 102, 335, 109, 328, 110, 328, 122, 333, 124, 331, 141, 330, 153, 322, 179, 285, 205, 262, 29
+};
+
+int[] whiteboard = {#e8e8e6, 
+  -1, 68, 174, 72, 173, -1, 0, 0
+};
+
+int[] pileOjunk = {#908471, 
+  0, 231, 13, 241, 61, 231, 149, 231, 156, 176, 122, 146, 91, 147, 82, 144, 88, 99, 57, 94, 55, 105, 42, 105, 31, 129, 24, 93, 0, 89
 };
 
 //////////// From Ariel's Undersea Massacre ///////////////////

@@ -82,8 +82,5 @@ void draw() {
     break;
   }
   println(count);
-  if (count >= 250) {
-    currentState = ProjectState.PLAYING;
-  }
 
 }

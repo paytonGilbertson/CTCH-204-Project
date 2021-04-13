@@ -49,7 +49,7 @@ void setup() {
 void draw() {
   background(255);
 
-  //hemanTime();
+  //endSlate();
 
   switch(currentState) {
   case BEGIN:
@@ -72,8 +72,12 @@ void draw() {
     //print("PLAYING");
     song.play();
     videoHeckYa();
+    if(count >= 2600){
+     currentState = ProjectState.END; 
+    }
     break;
   case END:
+    print("END");
     endSlate();
     break;
   }
@@ -81,4 +85,5 @@ void draw() {
   if (count >= 250) {
     currentState = ProjectState.PLAYING;
   }
+
 }

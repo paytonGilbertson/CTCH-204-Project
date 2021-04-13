@@ -30,6 +30,9 @@ void mousePressed() {
   if (overPlay(175, 175, 150, 150) && currentState == ProjectState.BEGIN) {
     currentState = ProjectState.STATIC;
   }
+  if(currentState == ProjectState.END){
+   link("https://www.youtube.com/watch?v=qh34QgRRY1I"); 
+  }
 }
 
 boolean overPlay(int x, int y, int w, int h) {

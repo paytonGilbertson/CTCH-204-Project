@@ -4,7 +4,8 @@ float letterY = 15;
 int i = 0;
 void techTime() {
   imageMode(CORNER);
-  font = createFont("Courier", 15);
+  font = loadFont("Courier.vlw");
+  textSize(15);
   textFont(font);
   background(106, 55, 27);
   drawPoly(deskTop);

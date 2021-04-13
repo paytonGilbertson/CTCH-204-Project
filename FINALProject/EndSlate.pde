@@ -1,9 +1,8 @@
 PFont endFont;
 
 void endSlate() {
-  endFont = createFont("Flegrei", 40);
+  endFont = loadFont("Flegrei-Regular-40.vlw");
   textFont(endFont);
-  //PFont.list();
   textAlign(CENTER);
   background(#20ACC9);
   noStroke();
@@ -19,6 +18,7 @@ void endSlate() {
   fill(#F5A01F);
   triangle(500, 500, 100, 400, 20, 480);
   
+  textSize(40);
   fill(#131C5a);
   text("Dr. T-Rizzle Sick Flow", width/2, 50);
   textSize(20);

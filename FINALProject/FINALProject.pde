@@ -1,15 +1,19 @@
 import ddf.minim.*;
 
+// setup for the song to play
 Minim mSong;
 AudioPlayer song;
 
+// setup for the static noise to play
 Minim mStatic;
 AudioPlayer staticSound;
 
+// classes for each pixel art head
 TRizzleHead fedoraHead;
 TRizzleHead techHead;
 TRizzleHead mercaHead;
 
+// frame count variable (used for timing)
 int count = 0;
 
 enum ProjectState {
@@ -72,8 +76,8 @@ void draw() {
     //print("PLAYING");
     song.play();
     videoHeckYa();
-    if(count >= 2600){
-     currentState = ProjectState.END; 
+    if (count >= 2600) {
+      currentState = ProjectState.END;
     }
     break;
   case END:
@@ -82,5 +86,4 @@ void draw() {
     break;
   }
   println(count);
-
 }

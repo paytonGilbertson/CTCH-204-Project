@@ -2,12 +2,16 @@ PFont font;
 float letterX = 10;
 float letterY = 15;
 int i = 0;
+
 void techTime() {
   imageMode(CORNER);
+  // load font for "hackerman" text
   font = loadFont("Courier.vlw");
   textSize(15);
   textFont(font);
   background(106, 55, 27);
+
+  // draw background images
   drawPoly(deskTop);
   drawPoly(booksWhite);
   drawPoly(bookFront);
@@ -17,6 +21,7 @@ void techTime() {
   drawPoly(screen);
   drawPoly(deskFront);
 
+  // display "hackerman" code aka lyrics
   fill(32, 194, 14);
   for (letterX = 0; letterX < width; letterX += 10) {
     for (letterY = 13; letterY < height; letterY += 15) {
@@ -29,9 +34,12 @@ void techTime() {
       }
     }
   }
+
+  // display trevor head
   image(techHead.image, techHead.image.width/3.5-50, height - techHead.image.height*3.5, techHead.image.width*3.5, techHead.image.height*3.5);
 }
 
+// background image shape descriptions
 int[] computer = {#d8dacc, 
   363, 143, 489, 154, 500, 162, 489, 248, 500, 252, 500, 331, 493, 342, 322, 298, 322, 281, 351, 246, 343, 238
 };
@@ -76,6 +84,7 @@ void drawPoly(int[] polygon) {
   return;
 }
 
+// original lyrics split into individual chars
 char[] code = {
   'v', 'a', 'r', ' ', 't', 'h', 'e', 'y', 'D', 'i', 'g', 'i', 't', 's', ',', ' ', 't', 'h', 'e', 'S', 't', 'a', 's', 'h', ',', ' ', 
   'n', 'e', 'x', 't', 'F', 'i', 'g', 'u', 'r', 'e', ',', ' ', 'a', 'n', 'E', 'm', 'p', 't', 'y', 'H', 'a', 's', 'h', ' ', '=', ' ', '{', '}', 

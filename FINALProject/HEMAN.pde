@@ -1,3 +1,4 @@
+// gotta make 69 heman stars. each with x, y, and size all random numbers
 float x1 = random(0, 500); 
 float y1 = random(0, 500); 
 float size1 = random(1, 5);
@@ -274,6 +275,7 @@ float x69 = random(0, 500);
 float y69 = random(0, 500);
 float size69 = random(1, 5);
 
+// bring in the fedora pics my dude
 PImage[] fedora = new PImage[9];
 float fedoraY = 0;
 int fedoraCount = 0;
@@ -289,7 +291,7 @@ void hemanTime() {
   fedora[7] = loadImage("fedora7.png");
   fedora[8] = loadImage("fedora8.png");
 
-
+  // creates rainbowfied background
   background(123, 22, 53);
   for (int i = 0; i < 167; i++) {
     stroke(lerpColor(color(255, 0, 0), color(0, 255, 0), i/167.0));
@@ -303,6 +305,7 @@ void hemanTime() {
     stroke(lerpColor(color(0, 0, 255), color(255, 0, 0), i/167.0));
     line(0, i+334, 500, i+334);
   }
+  // make 69 random stars fam
   imageMode(CENTER);
   fourStar(x1, y1, size1);
   fourStar(x2, y2, size2);
@@ -373,8 +376,9 @@ void hemanTime() {
   fourStar(x67, y67, size67);
   fourStar(x68, y68, size68);
   fourStar(x69, y69, size69);
-  
-  if(count % 10 == 0){
+
+  // update star locations every 10 frames
+  if (count % 10 == 0) {
     x1 = random(0, 500);
     y1 = random(0, 500);
     x2 = random(0, 500);
@@ -513,9 +517,9 @@ void hemanTime() {
     y68 = random(0, 500);
     x69 = random(0, 500);
     y69 = random(0, 500);
-    
   }
 
+  // make the fedora of wonder spin in until its on t-rizzle's head
   if (fedoraY <= height/2) {
     image(fedora[fedoraCount], width/2, fedoraY, fedora[fedoraCount].width*2, fedora[fedoraCount].height*2);
     fedoraCount++;
@@ -525,10 +529,12 @@ void hemanTime() {
       fedoraCount = 0;
     }
   } else {
+    // a magic t-rizzle appears
     image(fedoraHead.image, width/2, height/2, fedoraHead.image.width*2, fedoraHead.image.height*2);
   };
 };
 
+// how to make a heman star:
 void fourStar(float centerX, float centerY, float size) {
   fill(255);
   stroke(0);

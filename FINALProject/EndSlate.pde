@@ -1,12 +1,14 @@
 PFont endFont;
 
 void endSlate() {
+  // MUST USE '90S FONT
   endFont = loadFont("Flegrei-Regular-40.vlw");
   textFont(endFont);
   textAlign(CENTER);
   background(#20ACC9);
   noStroke();
 
+  // '90s inspired shape background
   fill(#673B90);
   rect(0, 240, 400, 400);
   fill(#3D6BBC);
@@ -17,7 +19,8 @@ void endSlate() {
   triangle(500, 0, 230, 300, 410, 0);
   fill(#F5A01F);
   triangle(500, 500, 100, 400, 20, 480);
-  
+
+  // Print the credits fam
   textSize(40);
   fill(#131C5a);
   text("Dr. T-Rizzle Sick Flow", width/2, 50);
@@ -26,7 +29,6 @@ void endSlate() {
   text("Music - I Get Around - Tupac", width/2, 125);
   text("Lyricist - Angus Croll", width/2, 150);
   text("Performed by - Dr T-Rizzle", width/2, 175);
-  
+
   text("Pixel Art and Code by Payton", width/2, 250);
-  
 }

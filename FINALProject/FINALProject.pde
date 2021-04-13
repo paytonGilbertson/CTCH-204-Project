@@ -16,6 +16,7 @@ TRizzleHead mercaHead;
 // frame count variable (used for timing)
 int count = 0;
 
+// Calls the correct functions based on where in the video you are
 enum ProjectState {
   BEGIN, 
     STATIC, 
@@ -23,6 +24,7 @@ enum ProjectState {
     END
 }
 
+// sets state to beginning
 ProjectState currentState = ProjectState.BEGIN;
 
 int bpm = 96;
@@ -34,16 +36,19 @@ void setup() {
   frameRate(30);
   colorMode(RGB);
 
+  // loads in song and static sound
   mSong = new Minim(this);
   song = mSong.loadFile("song.mp3");
 
   mStatic = new Minim(this);
   staticSound = mStatic.loadFile("static.mp3");
 
+  // Creates trevors many heads
   fedoraHead = new TRizzleHead();
   techHead = new TRizzleHead();
   mercaHead = new TRizzleHead();
 
+  // adds images to trevors many heads
   fedoraHead.image = loadImage("t-rizzleFedora.png");
   techHead.image = loadImage("techHead.png");
   mercaHead.image = loadImage("merca.png");
@@ -53,7 +58,9 @@ void setup() {
 void draw() {
   background(255);
 
+  /// For testing purposes only ///
   //endSlate();
+  /////////////////////////////////
 
   switch(currentState) {
   case BEGIN:
@@ -81,9 +88,9 @@ void draw() {
     }
     break;
   case END:
-    print("END");
+    //print("END");
     endSlate();
     break;
   }
-  println(count);
+  //println(count);
 }

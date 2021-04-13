@@ -3,8 +3,11 @@ void videoHeckYa() {
   if(count < 650){
     mercaBG();
   }
-  if(count >= 650 && count < 2600){
+  if(count >= 650 && count < 1600){
    techTime(); 
+  }
+  if(count >= 1600 && count < 2600){
+   hemanTime(); 
   }
   if(count >= 2600){
    currentState = ProjectState.END; 

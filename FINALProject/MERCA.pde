@@ -7,6 +7,7 @@ float bookY = random(0, 500);
 
 
 void mercaBG () {
+  // book image from indigo.com
   mercaBook = loadImage("mercaBook.png");
   background(255);
   int stripeY = 0; 

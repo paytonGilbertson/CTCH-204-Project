@@ -18,7 +18,3 @@ Write-up (artist statement):
 As a block-comment in your main processing file, you should include a ~1000 word artist statement. An artist statement is a written description of your work. 
 
 A good guide for writing an artist statement can be found at gyst-ink.com/artist-statement-guidelines. 
-
-# Backlog
-
-# Bugs
